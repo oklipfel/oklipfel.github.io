@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Olivia Klipfel Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#FAFAFA;
+    color:#222;
+    line-height:1.6;
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(250,250,250,.92);
+    backdrop-filter:blur(12px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 8%;
+    z-index:100;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:700;
+    letter-spacing:.05em;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#6B8AFD;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 8%;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,6rem);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    color:#555;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.button{
+    padding:16px 32px;
+    border-radius:100px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:600;
+}
+
+.primary{
+    background:#6B8AFD;
+    color:white;
+}
+
+.primary:hover{
+    background:#4C6CF0;
+}
+
+.secondary{
+    border:2px solid #6B8AFD;
+    color:#6B8AFD;
+}
+
+.secondary:hover{
+    background:#6B8AFD;
+    color:white;
+}
+
+/* Sections */
+
+section{
+    padding:110px 8%;
+}
+
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    transition:.3s;
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#666;
+}
+
+/* About */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about p{
+    color:#555;
+}
+
+.placeholder{
+    background:#EAEAEA;
+    border-radius:20px;
+    min-height:350px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#888;
+    font-size:1.1rem;
+}
+
+/* Footer */
+
+footer{
+    padding:60px 8%;
+    text-align:center;
+    color:#777;
+}
+
+@media(max-width:800px){
+
+.about{
+    grid-template-columns:1fr;
+}
+
+nav ul{
+    gap:18px;
+    font-size:.9rem;
+}
+
+.hero{
+    text-align:center;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Olivia Klipfel
+</div>
+
+<ul>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>
+Olivia<br>
+Klipfel
+</h1>
+
+<p>
+Designer, developer, and storyteller creating interactive experiences through technology, sound, and digital media. Welcome to my portfolio.
+</p>
+
+<div class="buttons">
+<a class="button primary" href="#projects">View Projects</a>
+<a class="button secondary" href="#contact">Get in Touch</a>
+</div>
+
+</div>
+
+</header>
+
+<section id="projects">
+
+<h2 class="section-title">
+Featured Projects
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Interactive Soundscape</h3>
+<p>
+An immersive digital archive exploring memory through recorded sound, spatial audio, and interactive storytelling.
+</p>
+</div>
+
+<div class="card">
+<h3>Unity Game Development</h3>
+<p>
+Games and prototypes developed in Unity using C#, emphasizing player experience, interaction design, and accessibility.
+</p>
+</div>
+
+<div class="card">
+<h3>Web Design</h3>
+<p>
+Responsive websites built with HTML, CSS, JavaScript, and WordPress, focusing on clean design and usability.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="about">
+
+<div>
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<p>
+I'm Olivia Klipfel, an integrated media designer and developer passionate about creating meaningful digital experiences. My work combines technology, interaction design, sound, and visual storytelling to build projects that are engaging, accessible, and thoughtfully crafted.
+</p>
+
+</div>
+
+<div class="placeholder">
+Profile Photo
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">
+Let's Connect
+</h2>
+
+<p style="max-width:650px;margin-bottom:35px;color:#555;">
+Interested in collaborating or learning more about my work? I'd love to hear from you.
+</p>
+
+<a class="button primary" href="mailto:your@email.com">
+Email Me
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Olivia Klipfel Portfolio
+
+</footer>
+
+</body>
+</html>
