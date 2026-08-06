@@ -4,217 +4,344 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Olivia Klipfel Portfolio</title>
+<title>Olivia Klipfel | Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:#FAFAFA;
-    color:#222;
-    line-height:1.6;
+font-family:'Inter',sans-serif;
+background:#fafafa;
+color:#111;
+line-height:1.6;
 }
 
-/* Navigation */
+/* ---------- NAV ---------- */
 
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(250,250,250,.92);
-    backdrop-filter:blur(12px);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:22px 8%;
-    z-index:100;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:24px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.8);
+backdrop-filter:blur(14px);
+z-index:999;
 }
 
 .logo{
-    font-size:1.2rem;
-    font-weight:700;
-    letter-spacing:.05em;
+font-size:1.2rem;
+font-weight:700;
+letter-spacing:.08em;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
+display:flex;
+gap:35px;
+list-style:none;
 }
 
 nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-    transition:.3s;
+text-decoration:none;
+color:#222;
+font-weight:500;
+transition:.25s;
 }
 
 nav a:hover{
-    color:#6B8AFD;
+color:#4b6fff;
 }
 
-/* Hero */
+/* ---------- HERO ---------- */
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:0 8%;
+
+min-height:100vh;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+padding:0 7%;
+
+gap:80px;
 }
 
-.hero-content{
-    max-width:900px;
+.hero-text h1{
+
+font-size:clamp(3rem,7vw,6rem);
+
+font-weight:800;
+
+line-height:1;
+
+margin-bottom:25px;
 }
 
-.hero h1{
-    font-size:clamp(3rem,8vw,6rem);
-    line-height:1;
-    margin-bottom:25px;
-}
+.hero-text p{
 
-.hero p{
-    font-size:1.2rem;
-    max-width:700px;
-    color:#555;
-    margin-bottom:40px;
+font-size:1.25rem;
+
+max-width:600px;
+
+color:#555;
+
+margin-bottom:40px;
 }
 
 .buttons{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
 }
 
-.button{
-    padding:16px 32px;
-    border-radius:100px;
-    text-decoration:none;
-    transition:.3s;
-    font-weight:600;
+.btn{
+
+padding:16px 34px;
+
+border-radius:100px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
 }
 
 .primary{
-    background:#6B8AFD;
-    color:white;
+
+background:#111;
+
+color:white;
 }
 
 .primary:hover{
-    background:#4C6CF0;
+
+transform:translateY(-3px);
+
+background:#333;
 }
 
 .secondary{
-    border:2px solid #6B8AFD;
-    color:#6B8AFD;
+
+border:2px solid #111;
+
+color:#111;
 }
 
 .secondary:hover{
-    background:#6B8AFD;
-    color:white;
+
+background:#111;
+
+color:white;
 }
 
-/* Sections */
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+}
+
+.hero-image img{
+
+width:100%;
+
+max-width:430px;
+
+border-radius:30px;
+
+box-shadow:0 35px 70px rgba(0,0,0,.12);
+
+transition:.4s;
+}
+
+.hero-image img:hover{
+
+transform:scale(1.02);
+}
+
+/* ---------- Sections ---------- */
 
 section{
-    padding:110px 8%;
+
+padding:120px 7%;
 }
 
 .section-title{
-    font-size:2.5rem;
-    margin-bottom:50px;
+
+font-size:2.8rem;
+
+margin-bottom:20px;
 }
 
-/* Cards */
+.section-description{
+
+max-width:700px;
+
+color:#666;
+
+margin-bottom:55px;
+}
+
+/* ---------- Cards ---------- */
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
 }
 
 .card{
-    background:white;
-    border-radius:20px;
-    padding:35px;
-    transition:.3s;
-    box-shadow:0 12px 30px rgba(0,0,0,.05);
+
+background:white;
+
+padding:40px;
+
+border-radius:24px;
+
+box-shadow:0 18px 40px rgba(0,0,0,.05);
+
+transition:.35s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.09);
 }
 
 .card h3{
-    margin-bottom:12px;
+
+font-size:1.4rem;
+
+margin-bottom:15px;
 }
 
 .card p{
-    color:#666;
+
+color:#666;
 }
 
-/* About */
+/* ---------- About ---------- */
 
 .about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+}
+
+.about h2{
+
+font-size:2.7rem;
+
+margin-bottom:25px;
 }
 
 .about p{
-    color:#555;
+
+color:#555;
+
+font-size:1.05rem;
 }
 
-.placeholder{
-    background:#EAEAEA;
-    border-radius:20px;
-    min-height:350px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#888;
-    font-size:1.1rem;
+/* ---------- Contact ---------- */
+
+.contact{
+
+text-align:center;
 }
 
-/* Footer */
+.contact h2{
+
+font-size:3rem;
+
+margin-bottom:15px;
+}
+
+.contact p{
+
+color:#666;
+
+margin-bottom:40px;
+}
+
+/* ---------- Footer ---------- */
 
 footer{
-    padding:60px 8%;
-    text-align:center;
-    color:#777;
+
+padding:50px;
+
+text-align:center;
+
+color:#888;
+
+font-size:.9rem;
 }
 
-@media(max-width:800px){
+/* ---------- Mobile ---------- */
 
-.about{
-    grid-template-columns:1fr;
-}
-
-nav ul{
-    gap:18px;
-    font-size:.9rem;
-}
+@media(max-width:900px){
 
 .hero{
-    text-align:center;
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+padding-top:120px;
+}
+
+.hero-image{
+
+order:-1;
 }
 
 .buttons{
-    justify-content:center;
+
+justify-content:center;
+}
+
+.about{
+
+grid-template-columns:1fr;
+}
+
+nav ul{
+
+gap:18px;
+
+font-size:.9rem;
 }
 
 }
@@ -226,67 +353,92 @@ nav ul{
 
 <nav>
 
-<div class="logo">
-Olivia Klipfel
-</div>
+<div class="logo">OLIVIA KLIPFEL</div>
 
 <ul>
-<li><a href="#projects">Projects</a></li>
+
+<li><a href="#work">Work</a></li>
+
 <li><a href="#about">About</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
 
 <header class="hero">
 
-<div class="hero-content">
+<div class="hero-text">
 
 <h1>
-Olivia<br>
-Klipfel
+Designer.<br>
+Editor.<br>
+Developer.
 </h1>
 
 <p>
-Designer, editor, and storyteller creating interactive experiences through technology, sound, and digital media. Welcome to my portfolio.
+I create thoughtful digital experiences through design, storytelling, video editing, and interactive technology.
 </p>
 
 <div class="buttons">
-<a class="button primary" href="#projects">View Projects</a>
-<a class="button secondary" href="#contact">Get in Touch</a>
+
+<a class="btn primary" href="#work">View My Work</a>
+
+<a class="btn secondary" href="#contact">Contact Me</a>
+
 </div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="assets/images/headshot.PNG" alt="Olivia Klipfel">
 
 </div>
 
 </header>
 
-<section id="projects">
+<section id="work">
 
 <h2 class="section-title">
-Featured Projects
+Featured Work
 </h2>
+
+<p class="section-description">
+A selection of projects spanning web development, media production, interactive design, and programming.
+</p>
 
 <div class="grid">
 
 <div class="card">
-<h3>Video Editing</h3>
+
+<h3>🎨 Design</h3>
+
 <p>
-Various documentary videos edited with the use of Adobe Premiere Pro focusing on color and sound correction, smooth transitions, and overall message. 
+Modern websites, user interfaces, branding, and visual experiences built with HTML, CSS, WordPress, and digital design tools.
 </p>
+
 </div>
 
 <div class="card">
-<h3>Unity Game Development</h3>
+
+<h3>🎬 Video Editing</h3>
+
 <p>
-Games and prototypes developed in Unity using C#, emphasizing player experience, interaction design, and accessibility.
+Documentaries, promotional videos, interviews, and multimedia storytelling edited using Adobe Premiere Pro with attention to pacing, sound, and color.
 </p>
+
 </div>
 
 <div class="card">
-<h3>Web Design</h3>
+
+<h3>💻 Programming</h3>
+
 <p>
-Responsive websites built with HTML, CSS, JavaScript using Squarespace, WordPress, GitHub and Wix, focusing on clean design and usability.
+Interactive applications and games developed with C#, Unity, JavaScript, Python, and web technologies.
 </p>
+
 </div>
 
 </div>
@@ -299,58 +451,47 @@ Responsive websites built with HTML, CSS, JavaScript using Squarespace, WordPres
 
 <div>
 
-<h2 class="section-title">
-About Me
-</h2>
+<h2>About Me</h2>
 
 <p>
-I'm Olivia Klipfel, a recent graduate from Pitzer College in Integrated Media Technology and Innovation, 
-    a self designed major bringing computer science and media studies together to create meaningful digital experiences. 
-    My work combines technology, interaction design, sound, and visual storytelling to build projects that are engaging, accessible, 
-    and thoughtfully crafted. 
+
+I'm Olivia Klipfel, an Integrated Media Technology & Innovation graduate passionate about combining design, programming, and storytelling into engaging digital experiences.
+
+My background spans web development, game design, interactive media, documentary editing, and creative technology. I enjoy solving problems through thoughtful design while building projects that are both functional and visually compelling.
+
 </p>
 
 </div>
 
-<div 
-    <img
-    src='oklipfel.github.io/assets/images/headshot.PNG'
-    alt="Portrait of Olivia Klipfel"
-    style="
-        width:100%;
-        max-width:450px;
-        border-radius:20px;
-        display:block;
-        margin:auto;
-        object-fit:cover;
-        box-shadow:0 12px 30px rgba(0,0,0,.08);
-    "
-    >
+<div>
+
+<img src="assets/images/headshot.PNG"
+
+style="width:100%;border-radius:25px;">
+
 </div>
 
 </div>
 
 </section>
 
-<section id="contact">
+<section id="contact" class="contact">
 
-<h2 class="section-title">
-Let's Connect
-</h2>
+<h2>Let's Create Something Together.</h2>
 
-<p style="max-width:650px;margin-bottom:35px;color:#555;">
-Interested in collaborating or learning more about my work? I'd love to hear from you.
+<p>
+I'm always interested in creative projects, freelance work, and new opportunities.
 </p>
 
-<a class="button primary" href="mailto:your@email.com">
-Email Me
+<a class="btn primary" href="mailto:your@email.com">
+Say Hello
 </a>
 
 </section>
 
 <footer>
 
-© 2026 Olivia Klipfel Portfolio
+© 2026 Olivia Klipfel • Designed & Developed by Olivia
 
 </footer>
 
