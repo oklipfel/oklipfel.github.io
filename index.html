@@ -1,6 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,488 +16,175 @@
 
 <style>
 
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+:root{
+    --cream:#F5F3EF;
+    --white:#FFFFFF;
+    --charcoal:#171717;
+    --gray:#666661;
+    --sage:#A8B5A2;
+    --bluegray:#8797A8;
+    --border:#DDDCD6;
+}
+
 *{
-margin:0; 
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:'Inter',sans-serif;
-background:#fafafa;
-color:#111;
-line-height:1.6;
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--charcoal);
+    line-height:1.6;
 }
 
-/* ---------- NAV ---------- */
+a{
+    color:inherit;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:24px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,.8);
-backdrop-filter:blur(14px);
-z-index:999;
+
+    position:fixed;
+
+    top:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:86%;
+    max-width:1200px;
+
+    padding:16px 22px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.88);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:100px;
+
+    backdrop-filter:blur(18px);
+
+    z-index:999;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
 }
 
 .logo{
-font-size:1.2rem;
-font-weight:700;
-letter-spacing:.08em;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
 }
 
 nav ul{
-display:flex;
-gap:35px;
-list-style:none;
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
 }
 
 nav a{
-text-decoration:none;
-color:#222;
-font-weight:500;
-transition:.25s;
+
+    text-decoration:none;
+
+    font-size:.9rem;
+
+    font-weight:500;
+
+    color:#444;
+
+    transition:.25s;
 }
 
 nav a:hover{
-color:#4b6fff;
+
+    color:var(--bluegray);
 }
 
-/* ---------- HERO ---------- */
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
 
-min-height:100vh;
+    min-height:100vh;
 
-display:grid;
-grid-template-columns:1fr 1fr;
+    max-width:1400px;
 
-align-items:center;
+    margin:auto;
 
-padding:0 7%;
+    padding:160px 7% 100px;
 
-gap:80px;
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    align-items:center;
+
+    gap:80px;
 }
 
-.hero-text h1{
+.hero-text{
 
-font-size:clamp(3rem,7vw,6rem);
-
-font-weight:800;
-
-line-height:1;
-
-margin-bottom:25px;
+    max-width:750px;
 }
 
-.hero-text p{
+.eyebrow{
 
-font-size:1.25rem;
+    display:inline-flex;
 
-max-width:600px;
+    align-items:center;
 
-color:#555;
+    gap:10px;
 
-margin-bottom:40px;
+    margin-bottom:28px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    color:#666;
 }
 
-.buttons{
+.eyebrow::before{
 
-display:flex;
+    content:"";
 
-gap:18px;
+    width:28px;
 
-flex-wrap:wrap;
+    height:1px;
+
+    background:var(--sage);
 }
 
-.btn{
+.hero h1{
 
-padding:16px 34px;
-
-border-radius:100px;
-
-font-weight:600;
-
-text-decoration:none;
-
-transition:.3s;
-}
-
-.primary{
-
-background:#111;
-
-color:white;
-}
-
-.primary:hover{
-
-transform:translateY(-3px);
-
-background:#333;
-}
-
-.secondary{
-
-border:2px solid #111;
-
-color:#111;
-}
-
-.secondary:hover{
-
-background:#111;
-
-color:white;
-}
-
-.hero-image{
-
-display:flex;
-
-justify-content:center;
-}
-
-.hero-image img{
-
-width:100%;
-
-max-width:430px;
-
-border-radius:30px;
-
-box-shadow:0 35px 70px rgba(0,0,0,.12);
-
-transition:.4s;
-}
-
-.hero-image img:hover{
-
-transform:scale(1.02);
-}
-
-/* ---------- Sections ---------- */
-
-section{
-
-padding:120px 7%;
-}
-
-.section-title{
-
-font-size:2.8rem;
-
-margin-bottom:20px;
-}
-
-.section-description{
-
-max-width:700px;
-
-color:#666;
-
-margin-bottom:55px;
-}
-
-/* ---------- Cards ---------- */
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:30px;
-}
-
-.card{
-
-background:white;
-
-padding:40px;
-
-border-radius:24px;
-
-box-shadow:0 18px 40px rgba(0,0,0,.05);
-
-transition:.35s;
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 25px 60px rgba(0,0,0,.09);
-}
-
-.card h3{
-
-font-size:1.4rem;
-
-margin-bottom:15px;
-}
-
-.card p{
-
-color:#666;
-}
-
-/* ---------- About ---------- */
-
-.about{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:70px;
-
-align-items:center;
-}
-
-.about h2{
-
-font-size:2.7rem;
-
-margin-bottom:25px;
-}
-
-.about p{
-
-color:#555;
-
-font-size:1.05rem;
-}
-
-/* ---------- Contact ---------- */
-
-.contact{
-
-text-align:center;
-}
-
-.contact h2{
-
-font-size:3rem;
-
-margin-bottom:15px;
-}
-
-.contact p{
-
-color:#666;
-
-margin-bottom:40px;
-}
-
-/* ---------- Footer ---------- */
-
-footer{
-
-padding:50px;
-
-text-align:center;
-
-color:#888;
-
-font-size:.9rem;
-}
-
-/* ---------- Mobile ---------- */
-
-@media(max-width:900px){
-
-.hero{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-padding-top:120px;
-}
-
-.hero-image{
-
-order:-1;
-}
-
-.buttons{
-
-justify-content:center;
-}
-
-.about{
-
-grid-template-columns:1fr;
-}
-
-nav ul{
-
-gap:18px;
-
-font-size:.9rem;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<nav>
-
-<div class="logo">OLIVIA KLIPFEL</div>
-
-<ul>
-
-<li><a href="#work">Work</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<header class="hero">
-
-<div class="hero-text">
-
-<h1>
-Designer.<br>
-Editor.<br>
-Developer.
-</h1>
-
-<p>
-I create thoughtful digital experiences through design, storytelling, video editing, and interactive technology.
-</p>
-
-<div class="buttons">
-
-<a class="btn primary" href="#work">View My Work</a>
-
-<a class="btn secondary" href="#contact">Contact Me</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img src="assets/images/headshot.jpeg" alt="Olivia Klipfel">
-
-</div>
-
-</header>
-
-<section id="work">
-
-<h2 class="section-title">
-Featured Work
-</h2>
-
-<p class="section-description">
-A selection of projects spanning web development, media production, interactive design, and programming.
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🎨 Design</h3>
-
-<p>
-Modern websites, user interfaces, branding, and visual experiences built with HTML, CSS, WordPress, and digital design tools.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🎬 Video Editing</h3>
-
-<p>
-Documentaries, promotional videos, interviews, and multimedia storytelling edited using Adobe Premiere Pro with attention to pacing, sound, and color.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>💻 Programming</h3>
-
-<p>
-Interactive applications and games developed with C#, Unity, JavaScript, Python, and web technologies.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<div class="about">
-
-<div>
-
-<h2>About Me</h2>
-
-<p>
-
-I'm Olivia Klipfel, an Integrated Media Technology & Innovation graduate passionate about combining design, programming, and storytelling into engaging digital experiences.
-
-My background spans web development, game design, interactive media, documentary editing, and creative technology. I enjoy solving problems through thoughtful design while building projects that are both functional and visually compelling.
-
-</p>
-
-</div>
-
-<div>
-
-<img
-  src="assets/images/headshot.jpeg"
-  alt="Headshot"
->
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="contact">
-
-<h2>Let's Create Something Together.</h2>
-
-<p>
-I'm always interested in creative projects, freelance work, and new opportunities.
-</p>
-
-<a class="btn primary" href="mailto:your@email.com">
-Say Hello
-</a>
-
-</section>
-
-<footer>
-
-© 2026 Olivia Klipfel • Designed & Developed by Olivia
-
-</footer>
-
-</body>
-</html>
+    font-size:clamp(4rem,8vw,7.5r
+```
