@@ -185,5 +185,925 @@ nav a:hover{
 
 .hero h1{
 
-    font-size:clamp(4rem,8vw,7.5r
+    font-size:clamp(4rem,8vw,7.5rem);
 
+    line-height:.9;
+
+    letter-spacing:-.07em;
+
+    font-weight:700;
+
+    margin-bottom:35px;
+}
+
+.hero h1 span{
+
+    color:var(--bluegray);
+}
+
+.hero-description{
+
+    max-width:650px;
+
+    font-size:1.2rem;
+
+    color:var(--gray);
+
+    margin-bottom:40px;
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 25px;
+
+    border-radius:100px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.primary{
+
+    background:var(--charcoal);
+
+    color:white;
+}
+
+.primary:hover{
+
+    transform:translateY(-3px);
+
+    background:#333;
+}
+
+.secondary{
+
+    border:1px solid var(--border);
+
+    background:rgba(255,255,255,.5);
+
+    color:var(--charcoal);
+}
+
+.secondary:hover{
+
+    background:white;
+
+    transform:translateY(-3px);
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:85%;
+
+    height:85%;
+
+    background:var(--sage);
+
+    border-radius:40px;
+
+    transform:rotate(5deg);
+
+    z-index:0;
+}
+
+.hero-image img{
+
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    max-width:430px;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border-radius:35px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.14);
+
+    transition:.4s;
+}
+
+.hero-image img:hover{
+
+    transform:translateY(-8px) rotate(-1deg);
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
+section{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:130px 7%;
+}
+
+.section-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    color:#777;
+}
+
+.section-label::before{
+
+    content:"";
+
+    width:25px;
+
+    height:1px;
+
+    background:var(--sage);
+}
+
+.section-title{
+
+    font-size:clamp(2.5rem,5vw,4.5rem);
+
+    line-height:1;
+
+    letter-spacing:-.05em;
+
+    margin-bottom:20px;
+}
+
+.section-description{
+
+    max-width:650px;
+
+    color:var(--gray);
+
+    font-size:1.05rem;
+
+    margin-bottom:60px;
+}
+
+
+/* =====================================================
+   WORK
+===================================================== */
+
+#work{
+
+    border-top:1px solid var(--border);
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.card{
+
+    position:relative;
+
+    min-height:360px;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    background:var(--white);
+
+    border:1px solid rgba(0,0,0,.05);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-70px;
+
+    right:-50px;
+
+    border-radius:50%;
+
+    background:var(--sage);
+
+    opacity:.55;
+
+    transition:.4s;
+}
+
+.card:nth-child(2)::before{
+
+    background:var(--bluegray);
+}
+
+.card:nth-child(3)::before{
+
+    background:#C8C5B9;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.09);
+}
+
+.card:hover::before{
+
+    transform:scale(1.3);
+}
+
+.card-number{
+
+    position:absolute;
+
+    top:30px;
+
+    left:35px;
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+    color:#888;
+
+    letter-spacing:.1em;
+}
+
+.card h3{
+
+    position:relative;
+
+    font-size:1.7rem;
+
+    margin-bottom:12px;
+
+    letter-spacing:-.03em;
+}
+
+.card p{
+
+    position:relative;
+
+    color:var(--gray);
+
+    font-size:.95rem;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+
+    align-items:center;
+}
+
+.about-image{
+
+    position:relative;
+}
+
+.about-image img{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:30px;
+
+    display:block;
+}
+
+.about-content h2{
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    line-height:1;
+
+    letter-spacing:-.05em;
+
+    margin-bottom:30px;
+}
+
+.about-content p{
+
+    color:var(--gray);
+
+    font-size:1.05rem;
+
+    margin-bottom:20px;
+}
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:35px;
+}
+
+.skill{
+
+    padding:9px 15px;
+
+    border:1px solid var(--border);
+
+    border-radius:100px;
+
+    background:white;
+
+    font-size:.8rem;
+
+    font-weight:500;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact{
+
+    text-align:center;
+
+    padding-top:160px;
+
+    padding-bottom:160px;
+}
+
+.contact-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:80px 40px;
+
+    background:var(--charcoal);
+
+    color:white;
+
+    border-radius:40px;
+}
+
+.contact-box .section-label{
+
+    justify-content:center;
+
+    color:#aaa;
+}
+
+.contact-box .section-label::before{
+
+    background:var(--sage);
+}
+
+.contact h2{
+
+    max-width:700px;
+
+    margin:0 auto 20px;
+
+    font-size:clamp(2.8rem,6vw,5rem);
+
+    line-height:.95;
+
+    letter-spacing:-.06em;
+}
+
+.contact p{
+
+    max-width:550px;
+
+    margin:0 auto 35px;
+
+    color:#aaa;
+}
+
+.contact .primary{
+
+    background:white;
+
+    color:var(--charcoal);
+}
+
+.contact .primary:hover{
+
+    background:var(--sage);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:35px 7%;
+
+    border-top:1px solid var(--border);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#888;
+
+    font-size:.8rem;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+    nav{
+
+        width:92%;
+
+        padding:14px 18px;
+    }
+
+    nav ul{
+
+        gap:16px;
+    }
+
+    nav a{
+
+        font-size:.8rem;
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        padding-top:150px;
+
+        text-align:center;
+
+        gap:60px;
+    }
+
+    .hero-description{
+
+        margin-left:auto;
+
+        margin-right:auto;
+    }
+
+    .buttons{
+
+        justify-content:center;
+    }
+
+    .hero-image{
+
+        order:-1;
+    }
+
+    .hero-image img{
+
+        max-width:340px;
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .card{
+
+        min-height:300px;
+    }
+
+    .about{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+    }
+
+    .about-image{
+
+        order:-1;
+    }
+
+    .about-image img{
+
+        margin:auto;
+    }
+
+    .contact-box{
+
+        padding:60px 25px;
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        text-align:center;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav ul{
+
+        gap:12px;
+    }
+
+    nav .logo{
+
+        font-size:.75rem;
+    }
+
+    .hero h1{
+
+        font-size:3.7rem;
+    }
+
+    section{
+
+        padding-top:90px;
+
+        padding-bottom:90px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+<div class="logo">
+OLIVIA KLIPFEL
+</div>
+
+<ul>
+
+<li>
+<a href="#work">Work</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+<div class="hero-text">
+
+<div class="eyebrow">
+Creative Technology & Digital Media
+</div>
+
+<h1>
+Designer.<br>
+<span>Editor.</span><br>
+Developer.
+</h1>
+
+<p class="hero-description">
+I create thoughtful digital experiences through design, storytelling, video editing, and interactive technology.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#work">
+View My Work →
+</a>
+
+<a class="btn secondary" href="#contact">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<img
+src="assets/images/headshot.jpeg"
+alt="Olivia Klipfel"
+>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     WORK
+===================================================== -->
+
+<section id="work">
+
+<div class="section-label">
+01 — Selected Work
+</div>
+
+<h2 class="section-title">
+What I Do
+</h2>
+
+<p class="section-description">
+A selection of work spanning web development, media production, interactive design, and programming.
+</p>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-number">
+01
+</div>
+
+<h3>
+🎨 Design
+</h3>
+
+<p>
+Modern websites, user interfaces, branding, and visual experiences built with HTML, CSS, WordPress, and digital design tools.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+02
+</div>
+
+<h3>
+🎬 Video Editing
+</h3>
+
+<p>
+Documentaries, promotional videos, interviews, and multimedia storytelling edited using Adobe Premiere Pro with attention to pacing, sound, and color.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+03
+</div>
+
+<h3>
+💻 Programming
+</h3>
+
+<p>
+Interactive applications and games developed with C#, Unity, JavaScript, Python, and web technologies.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+<div class="about">
+
+
+<div class="about-image">
+
+<img
+src="assets/images/headshot.jpeg"
+alt="Olivia Klipfel"
+>
+
+</div>
+
+
+<div class="about-content">
+
+<div class="section-label">
+02 — About Me
+</div>
+
+<h2>
+Technology meets storytelling.
+</h2>
+
+<p>
+I'm Olivia Klipfel, an Integrated Media Technology & Innovation graduate passionate about combining design, programming, and storytelling into engaging digital experiences.
+</p>
+
+<p>
+My background spans web development, game design, interactive media, documentary editing, and creative technology. I enjoy solving problems through thoughtful design while building projects that are both functional and visually compelling.
+</p>
+
+
+<div class="skills">
+
+<span class="skill">Unity</span>
+
+<span class="skill">C#</span>
+
+<span class="skill">Python</span>
+
+<span class="skill">JavaScript</span>
+
+<span class="skill">HTML / CSS</span>
+
+<span class="skill">Premiere Pro</span>
+
+<span class="skill">WordPress</span>
+
+<span class="skill">Interactive Media</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact" class="contact">
+
+<div class="contact-box">
+
+<div class="section-label">
+03 — Get In Touch
+</div>
+
+<h2>
+Let's create something together.
+</h2>
+
+<p>
+I'm always interested in creative projects, freelance work, and new opportunities.
+</p>
+
+<a
+class="btn primary"
+href="mailto:your@email.com"
+>
+Say Hello →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div>
+© 2026 Olivia Klipfel
+</div>
+
+<div>
+Designed & Developed by Olivia
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
