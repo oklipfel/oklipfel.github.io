@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Olivia Klipfel | Video Editing</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+:root{
+    --cream:#F5F3EF;
+    --white:#FFFFFF;
+    --charcoal:#171717;
+    --gray:#666661;
+    --sage:#A8B5A2;
+    --bluegray:#8797A8;
+    --border:#DDDCD6;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--charcoal);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav{
+
+    position:fixed;
+
+    top:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:86%;
+    max-width:1200px;
+
+    padding:16px 22px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.88);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:100px;
+
+    backdrop-filter:blur(18px);
+
+    z-index:999;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+}
+
+.logo{
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    font-size:.9rem;
+
+    font-weight:500;
+
+    color:#444;
+
+    transition:.25s;
+}
+
+nav a:hover{
+
+    color:var(--bluegray);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:180px 7% 110px;
+
+    display:grid;
+
+    grid-template-columns:1fr .7fr;
+
+    gap:80px;
+
+    align-items:end;
+}
+
+.eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    color:#777;
+}
+
+.eyebrow::before{
+
+    content:"";
+
+    width:28px;
+
+    height:1px;
+
+    background:var(--sage);
+}
+
+.hero h1{
+
+    font-size:clamp(4rem,8vw,7rem);
+
+    line-height:.9;
+
+    letter-spacing:-.07em;
+
+    margin-bottom:30px;
+}
+
+.hero h1 span{
+
+    color:var(--bluegray);
+}
+
+.hero p{
+
+    max-width:650px;
+
+    font-size:1.15rem;
+
+    color:var(--gray);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:0 7% 100px;
+}
+
+.intro-box{
+
+    padding:55px;
+
+    background:white;
+
+    border-radius:30px;
+
+    border:1px solid rgba(0,0,0,.05);
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+}
+
+.intro-box h2{
+
+    font-size:2rem;
+
+    line-height:1.1;
+
+    letter-spacing:-.04em;
+}
+
+.intro-box p{
+
+    color:var(--gray);
+
+    margin-bottom:18px;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:100px 7%;
+}
+
+.section-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    color:#777;
+}
+
+.section-label::before{
+
+    content:"";
+
+    width:25px;
+
+    height:1px;
+
+    background:var(--sage);
+}
+
+.section-title{
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    line-height:1;
+
+    letter-spacing:-.05em;
+
+    margin-bottom:60px;
+}
+
+
+/* =====================================================
+   VIDEO PROJECT
+===================================================== */
+
+.project{
+
+    margin-bottom:90px;
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.video-container{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    background:#222;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+}
+
+.video-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#aaa;
+
+    font-size:.9rem;
+}
+
+.project-info h3{
+
+    font-size:2rem;
+
+    line-height:1.1;
+
+    letter-spacing:-.04em;
+
+    margin-bottom:18px;
+}
+
+.project-info p{
+
+    color:var(--gray);
+
+    margin-bottom:25px;
+}
+
+.project-details{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+}
+
+.detail{
+
+    padding:8px 13px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:100px;
+
+    font-size:.75rem;
+
+    font-weight:500;
+}
+
+
+/* =====================================================
+   SECOND PROJECT
+===================================================== */
+
+.project.reverse{
+
+    grid-template-columns:1fr 1.5fr;
+}
+
+.project.reverse .video-container{
+
+    order:2;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:0 7% 100px;
+}
+
+.back a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:13px 20px;
+
+    border:1px solid var(--border);
+
+    border-radius:100px;
+
+    background:white;
+
+    text-decoration:none;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.back a:hover{
+
+    background:var(--charcoal);
+
+    color:white;
+
+    transform:translateX(-4px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:35px 7%;
+
+    border-top:1px solid var(--border);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#888;
+
+    font-size:.8rem;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+    nav{
+
+        width:92%;
+    }
+
+    nav ul{
+
+        gap:15px;
+    }
+
+    nav a{
+
+        font-size:.8rem;
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        padding-top:150px;
+
+        gap:40px;
+    }
+
+    .intro-box{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+        padding:35px;
+    }
+
+    .project,
+    .project.reverse{
+
+        grid-template-columns:1fr;
+    }
+
+    .project.reverse .video-container{
+
+        order:0;
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        text-align:center;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav .logo{
+
+        font-size:.7rem;
+    }
+
+    nav ul{
+
+        gap:10px;
+    }
+
+    .hero h1{
+
+        font-size:3.8rem;
+    }
+
+    .intro-box{
+
+        padding:28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+<div class="logo">
+OLIVIA KLIPFEL
+</div>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="index.html#work">Work</a>
+</li>
+
+<li>
+<a href="index.html#about">About</a>
+</li>
+
+<li>
+<a href="index.html#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+<div>
+
+<div class="eyebrow">
+02 — Video Editing
+</div>
+
+<h1>
+Visual<br>
+<span>Storytelling.</span>
+</h1>
+
+<p>
+I use video editing to transform interviews, documentary footage, and recorded moments into engaging visual stories.
+</p>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+<div class="intro-box">
+
+<div>
+
+<h2>
+Editing is more than putting clips together.
+</h2>
+
+</div>
+
+<div>
+
+<p>
+My approach to video editing focuses on storytelling, pacing, sound, and visual continuity. I enjoy finding the narrative within raw footage and using editing to guide the viewer through a story.
+</p>
+
+<p>
+My experience includes documentary interviews, promotional content, archival projects, and multimedia work.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="projects">
+
+<div class="section-label">
+Selected Work
+</div>
+
+<h2 class="section-title">
+Video Projects
+</h2>
+
+
+<!-- PROJECT 1 -->
+
+<div class="project">
+
+<div class="video-container">
+
+<!--
+Replace the placeholder below with your video embed.
+
+For YouTube, replace this entire div with:
+
+<iframe
+src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+allowfullscreen>
+</iframe>
+-->
+
+<div class="video-placeholder">
+Video Project 01
+</div>
+
+</div>
+
+
+<div class="project-info">
+
+<h3>
+Documentary & Interview Editing
+</h3>
+
+<p>
+Edited and compiled recorded interviews into a cohesive documentary-style piece, focusing on pacing, audio quality, narrative structure, and visual storytelling.
+</p>
+
+<div class="project-details">
+
+<span class="detail">
+Adobe Premiere Pro
+</span>
+
+<span class="detail">
+Interview Editing
+</span>
+
+<span class="detail">
+Documentary
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 2 -->
+
+<div class="project reverse">
+
+<div class="video-container">
+
+<div class="video-placeholder">
+Video Project 02
+</div>
+
+</div>
+
+
+<div class="project-info">
+
+<h3>
+Promotional & Creative Video
+</h3>
+
+<p>
+A multimedia project combining visual footage, music, sound design, and editing to create an engaging short-form video experience.
+</p>
+
+<div class="project-details">
+
+<span class="detail">
+Premiere Pro
+</span>
+
+<span class="detail">
+Sound Design
+</span>
+
+<span class="detail">
+Color
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 3 -->
+
+<div class="project">
+
+<div class="video-container">
+
+<div class="video-placeholder">
+Video Project 03
+</div>
+
+</div>
+
+
+<div class="project-info">
+
+<h3>
+Archival Media
+</h3>
+
+<p>
+A digital media project focused on preserving and presenting recorded material through thoughtful editing and accessible visual storytelling.
+</p>
+
+<div class="project-details">
+
+<span class="detail">
+Archival Media
+</span>
+
+<span class="detail">
+Editing
+</span>
+
+<span class="detail">
+Storytelling
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     BACK TO PORTFOLIO
+===================================================== -->
+
+<div class="back">
+
+<a href="index.html">
+← Back to Portfolio
+</a>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div>
+© 2026 Olivia Klipfel
+</div>
+
+<div>
+Designed & Developed by Olivia
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
+
